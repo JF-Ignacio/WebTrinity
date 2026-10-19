@@ -158,7 +158,7 @@ Full SQL: `database/schema.sql`. Seed data: `database/seed.sql` + `php database/
 
 Each phase lists **why** it exists, **tasks by lane**, a **deliverable**, a **"done when"** test, and **watch-outs**.
 
-### Phase 0: Team setup (Day 1)
+### Phase 0: Team setup (Day 1)John Franz
 
 **Why:** Most early time loss comes from "works on my machine". Fix that before writing features.
 
