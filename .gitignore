@@ -1,0 +1,38 @@
+# ==========================================
+# 1. Environment & Sensitive Configuration
+# ==========================================
+# Ignore production/local configuration containing live credentials
+/app/config/database.php
+.env
+
+# ==========================================
+# 2. Logs & Runtime Storage
+# ==========================================
+# Ignore log outputs and dynamic storage reports
+/logs/storage/*.log
+/logs/*.log
+/logs/storage/report.md
+
+# ==========================================
+# 3. IDE & Editor Configurations
+# ==========================================
+.vscode/
+.idea/
+.vs/
+*.suo
+*.user
+*.cache
+
+# ==========================================
+# 4. Operating System Files
+# ==========================================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ==========================================
+# 5. Package Managers & Dependencies (if applicable)
+# ==========================================
+/vendor/
+node_modules/
