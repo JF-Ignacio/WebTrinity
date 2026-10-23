@@ -16,9 +16,7 @@
 </head>
 <body>
     <?php $active = 'home'; require __DIR__ . '/../app/views/partials/navbar.php'; ?>
-    <!-- Main Content Wrapper -->
     <main class="container my-5">
-        <!-- Hero Section -->
         <section class="hero-section row align-items-center g-5 py-4 rounded-4 mb-4">
             <div class="col-lg-7">
                 <span class="badge bg-primary bg-opacity-25 text-info mb-3 px-3 py-2 rounded-pill fw-semibold border border-info border-opacity-25">
@@ -39,7 +37,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="col-lg-5">
                 <div class="trinity-stack">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -59,6 +56,13 @@
                         btn.addEventListener('click', () =&gt; alert('Triggered!'));
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="supporting-section align-items-center p-4 justify-content-center text-center">
+            <div class="supporting-content w-100">
+                <h1 class="type-writer-hero"></h1>
+                <span class="fw-bold small text-light mt-2">CORE FRONTEND TECHNOLOGIES IN ONE SINGLE PLATFORM</span>
             </div>
         </section>
 
@@ -130,6 +134,7 @@
 
         </section>
     </main>
+
     <footer class="py-4 text-center text-muted border-top border-secondary border-opacity-25 mt-5" style="background-color: rgba(11, 19, 43, 0.9);">
         <div class="container small">
             &copy; 2026 <b>WEB-TRINITY</b> Research Prototype. All rights reserved. Built with Bootstrap 5 & Custom Dark Tech Theme.

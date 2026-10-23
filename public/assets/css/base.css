@@ -125,6 +125,52 @@ pre {
     outline-offset: 2px;
 }
 
+/*
+====================================
+ ADD: TYPEWRITER ANIMATION
+=====================================
+*/
+
+.supporting-section {
+    display: flex;
+    min-height: 400px;
+    background-color: var(--bg);
+    color: var(--neon-royal);
+}
+
+.supporting-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+
+    /* --- Glassmorphism Core --- */
+    /* 1. Semi-transparent dark/light tint (adjust alpha 0.15 - 0.3 for taste) */
+    background: rgba(255, 255, 255, 0.08); 
+
+    /* 2. Frosted glass blur effect */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px); /* Safari support */
+
+    /* 3. Subtle translucent white border instead of solid whitesmoke */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px; /* Reduced slightly; 50px can be overly round for card containers */
+
+    /* 4. Ambient drop shadow for depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 1);
+}
+.supporting-content span {
+    letter-spacing: 5px;
+}
+
+.type-writer-hero {
+    background: linear-gradient(135deg, var(--neon-cyan), #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+    font-size: 5rem;
+}
 /* ==========================================
    5. HERO & STACK COMPONENTS
    ========================================== */
