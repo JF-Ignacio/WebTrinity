@@ -49,52 +49,48 @@ function updatePlayground() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const textElement = document.querySelector(".type-writer-hero");
+  const textElement = document.querySelector(".type-writer-text");
+  if (!textElement) return;
+  
+  const phrases = [
+    'WEB-TRINITY',
+    'HTML. CSS. JAVASCRIPT.',
+    'WEB DEVELOPMENT 1',
+    'ONE ECOSYSTEM'
+  ];
 
-    const phrases = [
-        'WEB-TRINITY',
-        'HTML, CSS, and JAVASCRIPT',
-        'ONE ECOSYSTEM'
-    ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
 
-    let phraseIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+  const typingSpeed = 80;
+  const deletingSpeed = 100;
+  const pauseEnd = 2000;
 
-    const typingSpeed = 200;
-    const deletingSpeed = 100;
-    const pauseEnd = 1800;
+  function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
 
-    function typeEffect() {
-        const currentPhase = phrases[phraseIndex];
+    charIndex += isDeleting ? -1 : 1;
+    textElement.textContent = currentPhrase.substring(0, charIndex);
 
-        if(isDeleting) {
-            charIndex--;
-            textElement.textContent = currentPhase.substring(0, charIndex);
-        }
-        else {
-            charIndex++;
-            textElement.textContent = currentPhase.substring(0, charIndex);
-        }
+    let currentSpeed = isDeleting ? deletingSpeed : typingSpeed;
 
-        let currentSpeed = isDeleting ? deletingSpeed : typingSpeed;
-
-        if(!isDeleting && charIndex === currentPhase.length) {
-            currentSpeed = pauseEnd;
-            isDeleting = true;
-        }
-
-        else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            currentSpeed = deletingSpeed;
-        }
-
-        setTimeout(typeEffect, currentSpeed);
+    // Pause on each full phrase, then erase it before moving to the next.
+    if (!isDeleting && charIndex >= currentPhrase.length) {
+        currentSpeed = pauseEnd;
+        isDeleting = true;
+    }
+    else if(isDeleting && charIndex <= 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        currentSpeed = 500;
     }
 
-    typeEffect();
 
+    setTimeout(typeEffect, currentSpeed);
+  }
+
+  typeEffect();
 });
 
 // Initialize state on load

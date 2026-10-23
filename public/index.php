@@ -61,7 +61,10 @@
 
         <section class="supporting-section align-items-center p-4 justify-content-center text-center">
             <div class="supporting-content w-100">
-                <h1 class="type-writer-hero"></h1>
+                <h2 class="type-writer-hero">
+                    <img src="assets/img/webtrinityLOGO.png" class="type-writer-logo p-0 img-fluid" alt="WEB-TRINITY logo">
+                    <span class="type-writer-text" aria-live="polite"></span>
+                </h2>
                 <span class="fw-bold small text-light mt-2">CORE FRONTEND TECHNOLOGIES IN ONE SINGLE PLATFORM</span>
             </div>
         </section>
