@@ -19,7 +19,11 @@
     <p><a href="modules.php">&larr; All modules</a></p>
     <div class="side">
       <nav id="topics" aria-label="Topics"></nav>
-      <article class="card"><h1 id="t"></h1><div id="body"></div><p class="muted" id="read"></p></article>
+        <article class="card">
+          <h1 id="t" class="text-primary"></h1>
+          <div id="body" style="color: white;"></div>
+          <p class="muted" id="read"></p>
+        </article>
     </div>
   </main>
 
