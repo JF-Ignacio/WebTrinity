@@ -20,9 +20,9 @@
     <p><a href="lesson.php">&larr; All lessons</a></p>
     <h1 id="title"></h1>
     
-    <div class="card">
-      <p id="concept"></p>
-      <strong>You will:</strong><ul id="objectives"></ul>
+    <div class="card text-white">
+      <p id="concept" class="text-white"></p>
+      <strong >You will:</strong><ul id="objectives"></ul>
       <p>Need a refresher? <span id="related"></span> <span class="muted">(open the modules while you work)</span></p>
     </div>
     <div class="split" style="margin-top:1rem">
