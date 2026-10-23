@@ -320,3 +320,120 @@ form.box input { padding: .7rem; border: 1px solid var(--line); background: #101
     .logo-placeholder { width: 40px; height: 40px; }
     .navbar-brand small { font-size: .55rem !important; }
 }
+
+/* Module topic preview cards */
+.module-card {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+}
+
+.module-card h2 {
+    margin: 0;
+    color: #f8fafc !important;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    overflow-wrap: anywhere;
+}
+
+.module-card > .tag,
+.module-card > p {
+    margin: 0;
+}
+
+.module-card .preview-toggle,
+.module-card .module-open {
+    width: 100%;
+    min-height: 3rem;
+    justify-content: space-between;
+    transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+
+.module-card .preview-toggle {
+    background: #263455;
+    border-color: #53688d;
+    color: #fff;
+}
+
+.module-card .preview-toggle:hover,
+.module-card .module-open:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+    box-shadow: 0 6px 18px rgba(0, 242, 254, .18);
+}
+
+.module-card .preview-toggle:focus-visible,
+.module-card .module-open:focus-visible {
+    outline: 3px solid #9aa6ff;
+    outline-offset: 3px;
+}
+
+.preview-chevron {
+    display: inline-block;
+    transition: transform .25s ease;
+}
+
+.preview-toggle[aria-expanded="true"] .preview-chevron {
+    transform: rotate(180deg);
+}
+
+.module-preview {
+    max-height: 0;
+    margin: 0;
+    padding: 0 .9rem;
+    overflow: hidden;
+    opacity: 0;
+    border: 0 solid var(--line);
+    border-radius: 8px;
+    background: rgba(11, 19, 43, .55);
+    color: #f8fafc;
+    transition: max-height .35s ease, opacity .25s ease, margin .25s ease, padding .25s ease, border-width .25s ease;
+}
+
+.module-preview.is-open {
+    max-height: 12rem;
+    margin: -.25rem 0;
+    padding: .85rem .9rem;
+    opacity: 1;
+    border-width: 1px;
+}
+
+.module-preview h3 {
+    margin: 0 0 .65rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.module-topic-list {
+    display: grid;
+    gap: .5rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.module-topic {
+    display: grid;
+    grid-template-columns: 1rem minmax(0, 1fr) auto;
+    gap: .55rem;
+    align-items: center;
+    color: #f8fafc;
+}
+
+.module-topic > span:first-child,
+.module-topic.is-read > span:first-child {
+    color: #34d399;
+}
+
+.topic-status {
+    color: #cbd5e1;
+    font-size: .8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module-card .preview-toggle,
+    .module-card .module-open,
+    .preview-chevron,
+    .module-preview {
+        transition: none;
+    }
+}
