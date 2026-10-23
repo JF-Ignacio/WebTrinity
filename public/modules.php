@@ -91,7 +91,6 @@
     preview.classList.toggle('is-open', !isExpanded);
   });
 
-
 </script>
 </body>
 </html>

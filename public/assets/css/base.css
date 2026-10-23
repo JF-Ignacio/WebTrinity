@@ -399,10 +399,16 @@ form.box input { padding: .7rem; border: 1px solid var(--line); background: #101
 }
 
 /* Module topic preview cards */
+#tracks {
+    align-items: start;
+}
+
 .module-card {
     display: flex;
     flex-direction: column;
     gap: .85rem;
+    align-self: start;
+    height: auto;
 }
 
 .module-card h2 {
